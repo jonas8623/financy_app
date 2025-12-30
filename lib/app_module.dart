@@ -1,3 +1,4 @@
+import 'package:financy_app/app/features/splash/splash_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class AppModule extends Module {
@@ -5,5 +6,7 @@ class AppModule extends Module {
   void binds(Injector i) {}
 
   @override
-  void routes(RouteManager r) {}
+  void routes(RouteManager r) {
+    r.module("/", module: SplashModule());
+  }
 }
