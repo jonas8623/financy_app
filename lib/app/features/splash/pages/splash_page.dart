@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -16,8 +17,8 @@ class SplashPage extends StatelessWidget {
       ),
       child: Text(
         "Financy",
-        style: TextStyle(
-          fontSize: 50,
+        style: GoogleFonts.inter(
+          fontSize: 50.0,
           fontWeight: FontWeight.w700,
           color: Colors.white,
         ),
