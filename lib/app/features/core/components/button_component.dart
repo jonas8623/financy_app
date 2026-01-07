@@ -16,15 +16,15 @@ class ButtonComponent extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(38.0),
         child: Container(
-          alignment: Alignment.center,
-          width: double.infinity,
+          alignment: .center,
+          width: .infinity,
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(38.0),
             gradient: LinearGradient(
               colors: ColorConstant.greenGradient,
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              begin: .topCenter,
+              end: .bottomCenter,
             ),
           ),
           child: Text(title, style: Theme.of(context).textTheme.labelLarge),

@@ -7,11 +7,11 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     body: Container(
-      alignment: Alignment.center,
+      alignment: .center,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+          begin: .topCenter,
+          end: .bottomCenter,
           colors: ColorConstant.greenGradient,
         ),
       ),

@@ -16,13 +16,13 @@ class RowTextButtonComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: .center,
     children: [
       Text(
         firstText,
         style: GoogleFonts.inter(
           fontSize: 14.0,
-          fontWeight: FontWeight.w600,
+          fontWeight: .w600,
           color: ColorConstant.blackOnboarding,
         ),
       ),
@@ -32,7 +32,7 @@ class RowTextButtonComponent extends StatelessWidget {
           secondText,
           style: GoogleFonts.inter(
             color: ColorConstant.greenPrimary,
-            fontWeight: FontWeight.w600,
+            fontWeight: .w600,
           ),
         ),
       ),
