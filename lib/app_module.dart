@@ -1,5 +1,5 @@
+import 'package:financy_app/app/features/auth/auth_module.dart';
 import 'package:financy_app/app/features/onboarding/onboarding_module.dart';
-import 'package:financy_app/app/features/splash/splash_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class AppModule extends Module {
@@ -10,6 +10,7 @@ class AppModule extends Module {
   void routes(RouteManager r) {
     r
       // ..module("/", module: SplashModule())
-      ..module("/", module: OnboardingModule());
+      ..module("/", module: OnboardingModule())
+      ..module("/auth/", module: AuthModule());
   }
 }
