@@ -1,5 +1,7 @@
 // components
+export 'components/button_component.dart';
 export 'components/image_asset_component.dart';
+export 'components/row_text_button_component.dart';
 
 // constants
 export 'constants/app_constant.dart';

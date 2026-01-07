@@ -3,5 +3,5 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class OnboardingModule extends Module {
   @override
-  void routes(RouteManager r) => r.child("/", child: (__) => OnboardingPage());
+  void routes(RouteManager r) => r.child("/", child: (_) => OnboardingPage());
 }

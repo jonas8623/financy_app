@@ -1,6 +1,5 @@
 import 'package:financy_app/app/features/core/_export_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -16,14 +15,7 @@ class SplashPage extends StatelessWidget {
           colors: ColorConstant.greenGradient,
         ),
       ),
-      child: Text(
-        "Financy",
-        style: GoogleFonts.inter(
-          fontSize: 50.0,
-          fontWeight: FontWeight.w700,
-          color: Colors.white,
-        ),
-      ),
+      child: Text("Financy", style: Theme.of(context).textTheme.displayLarge),
     ),
   );
 }
