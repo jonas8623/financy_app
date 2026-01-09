@@ -9,3 +9,5 @@ export 'sign_in/sign_in_module.dart';
 export 'sign_up/pages/sign_up_page.dart';
 
 export 'sign_up/sign_up_module.dart';
+
+export 'utils/auth_validation_mixin.dart';

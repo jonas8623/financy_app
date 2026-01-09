@@ -10,6 +10,22 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  late final GlobalKey<FormState> _formKey;
+  late final TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _formKey = .new();
+    _passwordController = .new();
+  }
+
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     TextStyle titleStyle = Theme.of(context).textTheme.headlineLarge!;
@@ -20,14 +36,24 @@ class _SignUpPageState extends State<SignUpPage> {
           padding: .symmetric(vertical: 20.0, horizontal: 16.0),
           child: Column(
             children: [
-              Text("Start saving", style: titleStyle),
+              Text("Start Saving", style: titleStyle),
               Text("Your Money!", style: titleStyle),
               const SizedBox(height: 20.0),
               ImageAssetComponent(name: AppConstant.signupImage),
               const SizedBox(height: 10.0),
-              FormSignUpComponent(),
+              FormSignUpComponent(
+                formKey: _formKey,
+                passwordController: _passwordController,
+              ),
               const SizedBox(height: 14.0),
-              ButtonComponent(title: "Get Started", onTap: () {}),
+              ButtonComponent(
+                title: "Get Started",
+                onTap: () {
+                  if (_formKey.currentState!.validate()) {
+                    debugPrint("SUCCESS...");
+                  }
+                },
+              ),
               const SizedBox(height: 10),
               RowTextButtonComponent(
                 firstText: "Already have account? ",

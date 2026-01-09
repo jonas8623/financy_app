@@ -9,6 +9,7 @@ class TextFormFieldComponent extends StatefulWidget {
   final TextInputType? textInputType;
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? formatters;
+  final String? helperText;
 
   const TextFormFieldComponent({
     super.key,
@@ -19,6 +20,7 @@ class TextFormFieldComponent extends StatefulWidget {
     this.textInputType,
     this.validator,
     this.formatters,
+    this.helperText,
   });
 
   @override
@@ -36,6 +38,8 @@ class _TextFormFieldComponentState extends State<TextFormFieldComponent> {
     textInputAction: TextInputAction.next,
     textCapitalization: widget.textCapitalization ?? TextCapitalization.none,
     decoration: InputDecoration(
+      helperText: widget.helperText,
+      helperMaxLines: 3,
       labelText: widget.label.toUpperCase(),
       suffixIcon: widget.isPassword
           ? IconButton(
@@ -44,7 +48,7 @@ class _TextFormFieldComponentState extends State<TextFormFieldComponent> {
                   _isObscure = !_isObscure;
                 });
               },
-              icon: Icon(_isObscure ? Icons.visibility_off : Icons.visibility),
+              icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off),
             )
           : null,
     ),
